@@ -1,1 +1,40 @@
-開発者用のブランチを作成しました。
+import java.util.Scanner;
+public class Main{
+  public static void main(String[] args){
+    Scanner scanner = new Scanner(System.in);
+    int A = scanner.nextInt();
+    int B = scanner.nextInt();
+    int C = scanner.nextInt();
+    
+    int first = A + B;
+    int second  = A + C;
+    int third = B + C;
+    
+    int result = first;
+    //firstが一番小さいとき
+    if(result < second && result < third){
+       if(second < third){
+         result = third;
+         
+       }else if(second > third){
+         result = second;
+         
+       }else System.out.println(second);
+       
+    } else if(result < second || result < third){
+         if(result < second){
+           result = second;
+            if(second < third){
+              result = third;
+            }
+         }else if(result < third){
+           result = third;
+           
+         }else System.out.println(result);
+         
+      }else System.out.println(result);
+       System.out.println(result);
+    }
+   
+  }
+a
